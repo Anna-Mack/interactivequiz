@@ -1,0 +1,81 @@
+	<style>
+
+
+#backr {
+background-image: url("code.jpg");
+}
+
+#main {
+width: 80%;
+max-width: 950px;
+margin: auto;
+padding: 10px;
+}
+
+#header {
+padding: 90px;
+height: 100%;
+background: #cfe2ff;
+color: #33699e;
+}
+
+
+#info {
+margin-top: 13px;
+padding-top: 40px;
+padding: 12px;
+padding-left: 28px;
+height: 75%;
+background: #e6f0ff;
+color: color: #33699e;
+border-radius: 10px;
+}
+
+#grade2 {
+font-size: 2rem;
+color: #9d5353;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: "Segoe UI";
+}
+
+.site-heading {
+	margin-top: 80px;
+	margin-bottom: 80px;
+	text-align: center;
+}
+
+h3 {
+    font-family: var(--bs-body-font-family);
+    font-size: 1.2rem;
+}
+
+label {
+display: block;
+}
+
+input {
+width: 30px;
+margin-left: 20px;
+}
+
+button {
+width: 100px;
+margin: 20px;
+margin-bottom: 30px;
+padding: 10px;
+font-family: var(--bs-body-font-family);
+font-size: 1.2rem;
+font-weight: bold;
+color: #33699e;
+background-color: #e6f0ff;
+
+}
+
+body {
+color: #33699e;
+}
+
+</style> 

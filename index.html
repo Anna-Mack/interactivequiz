@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">       
+	<!-- this file is an example of how to add Bootstrap containers, rows and columns to achieve a more interesting layout for the quiz -->
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+
+	<title>JavaScript Quiz</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<!-- header -->
+	<div id="header" class="container-fluid p-2">
+		<div class="site-heading">
+			<h1>How Much Do You Know About Abortion?</h1>
+		</div>
+	</div><!-- close header div -->
+
+	<div id="main">
+		<form id="form1">
+
+			<!-- Divider-->
+
+			<div id="info" class="container">
+				<h3>
+					Most people know someone who has had an abortion or they have had an abortion themself. But do people know as much about this increasingly common procedure as they think? Can an abortion be reversed? How are they performed? This quiz answers these questions and more. 
+				</h3>
+			</div>
+
+			<!-- Divider-->
+			<hr class="my-4" />
+
+			<div id="section" class="container">
+				<form id="form1">
+					<h2>How many abortions occured in 2020 in the United States?</h2>
+				</div>
+				<div class="col-md-11">
+					<label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />260,000 (1 in 20 pregnancies resulted in abortion)</label>
+					<label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />590,000 (1 in 10 pregnancies resulted in abortion)</label>
+					<label for="var_info"><input type="radio" name="variable" value="20" id="var_info" />930,000 (1 in 5 pregnancies resulted in abortion)</label>
+					<label for="var_condition"><input type="radio" name="variable" value="0" id="var_condition"/>100,000 (1 in 40 pregnancies resulted in abortion)</label>
+				</div>
+
+				<!-- Divider-->
+				<hr class="my-4" />
+				
+
+				<div id="section" class="container">
+					<h2>What is the most common abortion meathod?</h2>
+				</div>
+				<div class="col-md-11">
+					<label for="sub_string"><input type="radio" name="sub" value="20" id="sub_string"/>Surgical abortion called vacuum aspiration</label>
+					<label for="sub_join"><input type="radio" name="sub" value="0" id="sub_join"/>Medical abortion using pills taken at home</label>
+					<label for="sub_info"><input type="radio" name="sub" value="0" id="sub_info" />Medical abortion through induction</label>
+					<label for="sub_condition"><input type="radio" name="sub" value="0" id="sub_condition" />Surgicial abortion called dialation and evacuation</label>
+				</div>
+				<!-- Divider-->
+				<hr class="my-4" />
+
+				<div id="section" class="container">
+					<h2>How much does an abortion cost?</h2>
+				</div>
+				<div class="col-md-11">
+					<label for="cat_string"><input type="radio" name="con" value="0" id="cat_string" />$50-$300</label>
+					<label for="cat_join"><input type="radio" name="con" value="20" id="cat_join" />$600-$2000</label>
+					<label for="cat_info"><input type="radio" name="con" value="0" id="cat_info" />$150-$9000</label>
+					<label for="cat_condition"><input type="radio" name="con" value="0" id="cat_condition" />$400-$1200</label>
+				</div>
+				<!-- Divider-->
+				<hr class="my-4" />
+
+				<div id="section" class="container">
+					<h2>Can an abortion by reversed?</h2>
+				</div>
+				<div class="col-md-11">
+					<label for="if_string"><input type="radio" name="ifstate" value="0" id="if_string" />No, trying to reverse an abortion could cause serious harm to the woman. </label>
+					<label for="if_join"><input type="radio" name="ifstate" value="0" id="if_join" />Yes, abortion pill reversal medications can be taken within 5 hrs of taking the abortion pill. </label>
+					<label for="if_info"><input type="radio" name="ifstate" value="0" id="if_info" />Sometimes, but abortion pill reversal meathods are rarely successful.</label>
+					<label for="if_condition"><input type="radio" name="ifstate"  value="20" id="if_condition" />Yes, abortion pill reversal medications have been successful 72 hrs after abortion pills were taken.</label>
+				</div>
+
+				<!-- Divider-->
+				<hr class="my-4" />
+
+				<div id="section" class="container">
+					<h2>How many pregnancies end in abortion?</h2>
+				</div>
+				<div class="col-md-11">
+					<label for="sum_string"><input type="radio" name="sumstate" value="0" id="sum_string" />5% (11 million abortions per year)</label>
+					<label for="sum_join"><input type="radio" name="sumstate" value="20" id="sum_join" />25% (56 million abortions per year)</label>
+					<label for="sum_info"><input type="radio" name="sumstate" value="0" id="sum_info" />12% (32 million abortions per year) </label>
+					<label for="sum_condition"><input type="radio" name="sumstate"  value="0" id="sum_condition" />1.5% (50,000 abortions per year)</label>
+				</div>
+
+				<!-- Divider-->
+				<hr class="my-4" />
+
+				<div id="section" class="container">
+
+					<button type="submit" value="Submit">Submit</button>
+
+				</div>
+
+			</form>
+
+			<div id="section" class="container">
+				<p id="grade2"></p>
+			</div><!-- close main div -->
+		</div>
+		<div>
+
+			<script>
+
+//alert 
+
+				document.getElementById("form1").onsubmit=function() {
+					
+					if(document.querySelector('input[name = "variable"]:checked') &&  document.querySelector('input[name = "sub"]:checked') && document.querySelector('input[name = "con"]:checked') &&  document.querySelector('input[name = "ifstate"]:checked') &&  document.querySelector('input[name = "sumstate"]:checked')){
+						
+						variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+						sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+						con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+						ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
+						sumstate = parseInt(document.querySelector('input[name = "sumstate"]:checked').value);
+
+
+						result = variable + sub + con + ifstate + sumstate;
+
+
+//document.getElementById("grade").innerHTML = result;
+						grading = [
+							{score:0,feedback:"You answered 0 questions correctly.",},
+							{score:20,feedback:"You answered 1 of 5 questions correctly.",},
+							{score:40,feedback:"You answered 2 of 5 questions correctly.",},
+							{score:60,feedback:"You answered 3 of 5 questions correctly.",},
+							{score:80,feedback:"You answered 4 of 5 questions correctly.",},
+							{score:100,feedback:"You answered all the questions correctly.",}
+							];
+
+						for(i=0; i<grading.length; i++) {
+							if(result == grading[i].score) {
+								result2 = grading[i].feedback;
+							}
+						}
+
+
+						document.getElementById("grade2").innerHTML = result2;
+
+
+// reminds user to submit answers to all questions.
+						
+					}
+					else {
+						alert("Please fill out all questions before submitting.");
+					}
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+</script>
+
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</body>
+
+</html>
